@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <io.github.ynagarjuna1995.levelup2.ClearableEditText
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:id="@+id/custom_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:id="@+id/address_predictions_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/cl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:background="@color/black_effective"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:expanded="false"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="5dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                app:subtitleTextColor="@color/white"
+                app:titleTextColor="@color/white" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home Screen"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_title" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_margin="4dp"
+            android:orientation="vertical"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/root_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.main.MainActivity">
+
+            <Button
+                android:id="@+id/landmark_search_view"
+                android:drawableLeft="@drawable/ic_search"
+                android:paddingStart="24dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:background="@drawable/shadow_bg"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:drawablePadding="8dp"
+                android:textStyle="italic"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="Search for a landmark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:visibility="visible"
+                android:layout_below="@id/landmark_search_view"
+                android:id="@+id/landmarks_recyclerview"
+                android:layout_marginBottom="64dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/user_action_info_text"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                style="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="You have not added any landmarks."
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/bottom_action_container"
+                android:background="@android:color/white"
+                android:layout_alignParentBottom="true"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_margin="4dp"
+                    style="@style/Button.Button"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:id="@+id/nearest_points_btn"
+                    android:layout_weight="1"
+                    android:text="Nearest Points"
+                    android:layout_width="wrap_content" />
+
+                <Button
+                    android:layout_margin="4dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    style="@style/Button.Button"
+                    android:id="@+id/animate_on_map_btn"
+                    android:layout_weight="1"
+                    android:text="Animate on Map"
+                    android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

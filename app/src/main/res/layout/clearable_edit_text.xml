@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/clearable_edit"
+            style="@style/SearchEditText"
+            android:cursorVisible="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:textCursorDrawable="@null"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            android:drawableStart="@drawable/ic_search"
+            android:paddingStart="6dp"
+            android:drawablePadding="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:hint="Enter Address here .."
+            android:gravity="center_vertical"
+            android:textColorHint="@color/LightGray"
+            android:background="@null"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:imeActionLabel="Search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:padding="16dp"
+            android:id="@+id/clearable_button_clear"
+            android:layout_width="16dip"
+            android:layout_height="16dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_cancel_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"/>
+
+</RelativeLayout>
