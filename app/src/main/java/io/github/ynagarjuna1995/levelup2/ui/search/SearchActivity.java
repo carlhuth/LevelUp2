@@ -58,6 +58,7 @@ public class SearchActivity extends BaseActivity implements ISearchMVPView,Addre
 
     // outofscope of butterknife
     Button clearBtn;
+    EditText searchEditText;
 
     private LinearLayoutManager mLinearLayoutManager;
 
@@ -78,15 +79,17 @@ public class SearchActivity extends BaseActivity implements ISearchMVPView,Addre
         mSearchPresenter.onAttach(this);
 
         clearBtn = mSearchEditText.getClearBtn();
+        searchEditText = mSearchEditText.getEditText();
 
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mAddressPredictionsAdapter.clear();
+                searchEditText.setText("");
             }
         });
 
-        mSearchPresenter.rxSearchBoxEvent(RxTextView.textChanges(mSearchEditText.getEditText()));
+        mSearchPresenter.rxSearchBoxEvent(RxTextView.textChanges(searchEditText));
     }
 
     private void setupAdddressPredictionRecycler() {
